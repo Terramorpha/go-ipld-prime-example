@@ -1,0 +1,14 @@
+#+TITLE: go-ipld example
+
+The new way of using IPLD with RPC to kubo was not clear to me. I didn't know
+how I should manipulate ipld nodes, marshall/unmarshall them, or navigate
+through them. In this example, I do the following:
+
+1. Use =basicnode= to unmarshall ipld data from codec to data structure.
+2. Use a =LinkSystem= (wrapping =rpc.Block()= to make the following the links
+   created by =basicnode= possible.
+3. Use a =selector= to facilitate the traversal (without a bunch type casts) of a
+   tree of *multiple nodes*.
+
+
+
